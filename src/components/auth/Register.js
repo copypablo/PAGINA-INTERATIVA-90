@@ -76,7 +76,7 @@ const Register = ({ onSwitchToLogin, onRegister }) => {
         <h1>Saúde<span>Tracker</span></h1>
       </div>
       <h2 className="auth-title">Cadastro</h2>
-      <p className="auth-subtitle">Crie sua conta para começar a monitorar sua saúde</p>
+      <p className="auth-subtitle">Crie sua conta para começar a monitorar seus avanços.</p>
       
       {errorMessage && <p className="error-message">{errorMessage}</p>}
       {successMessage && <p className="success-message">{successMessage}</p>}

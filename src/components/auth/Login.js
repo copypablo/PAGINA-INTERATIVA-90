@@ -37,10 +37,10 @@ const Login = ({ onSwitchToRegister, onLogin }) => {
   return (
     <div className="auth-card">
       <div className="auth-logo">
-        <h1>Saúde<span>Tracker</span></h1>
+        <h1>PROTOCOLO<span> 12 SEMANAS</span></h1>
       </div>
       <h2 className="auth-title">Login</h2>
-      <p className="auth-subtitle">Faça login para acessar seu painel</p>
+      <p className="auth-subtitle">Faça login para acessar sua evolução.</p>
       
       {errorMessage && <p className="error-message">{errorMessage}</p>}
       
