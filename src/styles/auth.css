@@ -1,0 +1,85 @@
+/* Estilos para as páginas de autenticação */
+.auth-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--black);
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 400px;
+  background-color: var(--gray);
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.auth-title {
+  color: var(--white);
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 24px;
+}
+
+.auth-subtitle {
+  color: var(--orange);
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-input {
+  margin-bottom: 15px;
+  padding: 12px;
+  border: 1px solid #444;
+  border-radius: 5px;
+  background-color: var(--light-gray);
+  color: var(--black);
+}
+
+.auth-button {
+  background-color: var(--orange);
+  color: var(--white);
+  border: none;
+  padding: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+}
+
+.auth-button:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.auth-link {
+  color: var(--orange);
+  text-align: center;
+  margin-top: 20px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.auth-logo {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.auth-logo h1 {
+  color: var(--orange);
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.auth-logo span {
+  color: var(--white);
+}

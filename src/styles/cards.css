@@ -1,0 +1,632 @@
+/* Estilos para cards animados */
+
+/* Card de Progresso */
+.progress-card {
+  background: linear-gradient(135deg, #1e1e1e, #2d2d2d);
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 140, 66, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.progress-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.progress-card-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.progress-card-title h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+  background: linear-gradient(90deg, #ff8c42, #ff5252);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.progress-card-icon {
+  font-size: 1.8rem;
+}
+
+.progress-card-status {
+  font-size: 0.9rem;
+  color: #aaa;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+}
+
+.progress-card-body {
+  margin-bottom: 1.5rem;
+}
+
+.progress-values {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.progress-current, .progress-goal {
+  display: flex;
+  flex-direction: column;
+}
+
+.progress-label {
+  font-size: 0.8rem;
+  color: #777;
+  margin-bottom: 0.25rem;
+}
+
+.progress-value {
+  font-size: 1.2rem;
+  color: #ddd;
+  font-weight: 600;
+}
+
+.progress-bar-container {
+  height: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #ff8c42, #ff5252);
+  border-radius: 4px;
+}
+
+.progress-details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.progress-difference, .progress-remaining {
+  display: flex;
+  flex-direction: column;
+}
+
+.progress-percentage {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  width: 60px;
+  height: 60px;
+}
+
+.progress-circle {
+  width: 100%;
+  height: 100%;
+}
+
+.progress-circle-bg {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.1);
+  stroke-width: 5;
+}
+
+.progress-circle-fill {
+  fill: none;
+  stroke: #ff8c42;
+  stroke-width: 5;
+  stroke-linecap: round;
+  transform: rotate(-90deg);
+  transform-origin: center;
+  stroke-dasharray: 283;
+}
+
+.progress-circle-text {
+  fill: white;
+  font-size: 14px;
+  font-weight: bold;
+  text-anchor: middle;
+  dominant-baseline: middle;
+}
+
+/* Card de Medalhas */
+.medals-card {
+  background: linear-gradient(135deg, #1e1e1e, #2d2d2d);
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 140, 66, 0.2);
+}
+
+.medals-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(90deg, #ff8c42, #ff5252);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.medals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.medal-item {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.medal-item:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-3px);
+}
+
+.medal-item.locked {
+  opacity: 0.6;
+  filter: grayscale(0.8);
+}
+
+.medal-icon {
+  font-size: 2rem;
+  min-width: 40px;
+  text-align: center;
+}
+
+.medal-info {
+  flex: 1;
+}
+
+.medal-name {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 0.25rem 0;
+  color: white;
+}
+
+.medal-description {
+  font-size: 0.8rem;
+  color: #aaa;
+  margin: 0;
+}
+
+.medal-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at center, rgba(255, 140, 66, 0.2), transparent 70%);
+  pointer-events: none;
+}
+
+.medals-footer {
+  text-align: center;
+}
+
+.medals-progress {
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-bottom: 0.5rem;
+}
+
+.medals-progress-bar {
+  height: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.medals-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #ff8c42, #ff5252);
+  border-radius: 3px;
+}
+
+/* Card de Motivação */
+.motivation-card {
+  background: linear-gradient(135deg, #1e1e1e, #2d2d2d);
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 140, 66, 0.2);
+}
+
+.motivation-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.motivation-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+  background: linear-gradient(90deg, #ff8c42, #ff5252);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.motivation-refresh {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: white;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.motivation-refresh:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: rotate(180deg);
+}
+
+.refresh-icon {
+  font-size: 1.2rem;
+}
+
+.motivation-content {
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.quote-container {
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.quote-text {
+  font-size: 1.2rem;
+  color: white;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.quote-author {
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.motivation-footer {
+  display: flex;
+  justify-content: center;
+}
+
+.motivation-indicator {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.indicator-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.indicator-dot.active {
+  background: #ff8c42;
+}
+
+/* Card de Histórias de Sucesso */
+.success-stories-card {
+  background: linear-gradient(135deg, #1e1e1e, #2d2d2d);
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 140, 66, 0.2);
+}
+
+.success-stories-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(90deg, #ff8c42, #ff5252);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.success-stories-content {
+  min-height: 300px;
+  position: relative;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+}
+
+.story-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .story-container {
+    flex-direction: row;
+  }
+}
+
+.story-image-container {
+  flex: 1;
+  min-width: 200px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.story-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.story-image:hover {
+  transform: scale(1.05);
+}
+
+.story-details {
+  flex: 2;
+}
+
+.story-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+  color: white;
+}
+
+.story-stats {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.story-stat {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: #777;
+  margin-bottom: 0.25rem;
+}
+
+.stat-value {
+  font-size: 1.2rem;
+  color: #ff8c42;
+  font-weight: 600;
+}
+
+.story-description {
+  font-size: 0.9rem;
+  color: #aaa;
+  line-height: 1.6;
+}
+
+.success-stories-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.nav-button {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.nav-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.story-indicators {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.story-indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.story-indicator.active {
+  background: #ff8c42;
+  transform: scale(1.2);
+}
+
+.success-stories-footer {
+  text-align: center;
+}
+
+.success-stories-note {
+  font-size: 0.8rem;
+  color: #777;
+  font-style: italic;
+}
+
+/* Card de Celebração */
+.celebration-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.celebration-card {
+  width: 90%;
+  max-width: 400px;
+  background: linear-gradient(135deg, #7b2cbf, #4cc9f0);
+  border-radius: 20px;
+  padding: 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), 0 0 20px rgba(123, 44, 191, 0.5);
+}
+
+.celebration-icon {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+
+.celebration-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.celebration-description {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.celebration-button {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.celebration-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-3px);
+}
+
+/* Partículas de celebração */
+.celebration-particle {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* Confete */
+.confetti-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.confetti {
+  position: absolute;
+  width: 10px;
+  height: 20px;
+  opacity: 0.7;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .medals-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .story-container {
+    flex-direction: column;
+  }
+  
+  .story-image-container {
+    max-height: 200px;
+  }
+  
+  .celebration-card {
+    padding: 1.5rem;
+  }
+  
+  .celebration-icon {
+    font-size: 4rem;
+  }
+  
+  .celebration-title {
+    font-size: 1.5rem;
+  }
+  
+  .celebration-description {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .progress-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .progress-percentage {
+    position: relative;
+    top: 0;
+    right: 0;
+    margin: 1rem auto;
+  }
+  
+  .story-stats {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
